@@ -7,6 +7,9 @@ Welcome to the python training camp. The purpose of this repository is to help y
 
 ### Problem Set 1
 
+##### Warmup
+- [Utopian Tree](https://www.hackerrank.com/challenges/utopian-tree/problem)
+
 ##### Easy
  - [Plus Minus](https://www.hackerrank.com/challenges/plus-minus/problem)
  - [Birthday Chocolate](https://www.hackerrank.com/challenges/the-birthday-bar/problem)
