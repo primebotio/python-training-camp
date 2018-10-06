@@ -1,11 +1,7 @@
 #!/bin/python3
 # -*- coding: utf-8 -*-
 
-import math
 import os
-import random
-import re
-import sys
 
 def utopianTree(number_of_periods): 
     #my code starts here     
