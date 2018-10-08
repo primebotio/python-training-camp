@@ -1,4 +1,5 @@
 #!/bin/python3
+# -*- coding: utf-8 -*-
 
 import math
 import os
@@ -9,7 +10,7 @@ NO_OF_CHARS = 100000
 # Complete the gameOfThrones function below.
 def gameOfThrones(s):
     #create countermatrix full of zeros
-    count = [0]*(NO_OF_CHARS)
+    count = [0]*NO_OF_CHARS
 
     #count character occurences
     for i in range(len(s)):
@@ -18,7 +19,7 @@ def gameOfThrones(s):
     #count odd occuring characters
     odd = 0
     for i in range(NO_OF_CHARS):
-        if (count[i]&1):
+        if count[i]&1:
             odd += 1
         if odd>1 :
             return "NO"
