@@ -23,6 +23,7 @@ Welcome to the python training camp. The purpose of this repository is to help y
  ##### Medium
  - [Stone Division](https://www.hackerrank.com/challenges/stone-division-2/problem)
  - [Minimum Loss](https://www.hackerrank.com/challenges/minimum-loss/problem)
+ - [Candies](https://www.hackerrank.com/challenges/candies/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=dynamic-programming)
 
  ##### God Mode
  - [Roads and Libraries](https://www.hackerrank.com/challenges/torque-and-development/problem)
