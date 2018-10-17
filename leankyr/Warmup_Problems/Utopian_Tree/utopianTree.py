@@ -1,10 +1,4 @@
 #!/usr/bin/env python3.5
-from __future__ import print_function
-from functools import reduce
-import math
-import os
-import random
-import re
 import sys
 import logging
 #import ipdb
@@ -36,7 +30,7 @@ def read_file(filename):
     return array
 
 def utopianTree(n):
-    if(n==0):
+    if n==0:
         return 1
 
     H = 1
@@ -51,11 +45,6 @@ def utopianTree(n):
 
 if __name__ == '__main__':
 
-    # INFO
-    # I read the testcase files with function read file
-    # which outputs an anrray
-    # FUNCTIONALITY
-    # Change the number before the . to pick test case [0-2]
     t = read_file('testcases/testcase0.txt')
 
     logging.debug(len(t))
