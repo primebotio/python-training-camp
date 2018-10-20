@@ -1,8 +1,6 @@
 #!/usr/bin/env python3.5
 # -*- coding: utf-8 -*-
 
-import math
-import re
 import sys
 
 # Complete the birthday function below.
