@@ -15,8 +15,8 @@ if __name__ == '__main__':
     
     n,z,p = plusMinusReduced(arr)
     
-    print ("%6f" %p)
-    print ("%6f" %n)
-    print ("%6f" %z)
+    print ("%.6f" %p)
+    print ("%.6f" %n)
+    print ("%.6f" %z)
 
 
