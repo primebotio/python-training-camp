@@ -12,22 +12,21 @@ import sys
 def gameOfThrones(s):
     s = s.rstrip('\n')
     counter = 0
-    st = set()
+    lettermap = dict(zip("abcdefghijklmnopqrstuvwyz",range(0,26)))
+    times_found = [0]*26
+
     for c in s:
-        if c in st:
-            continue
-        #print (s.count(c))
-        if s.count(c) % 2 != 0 and c not in st:
-            st.add(c)
+        if c in lettermap:
+            times_found[lettermap[c]] += 1
+
+    #print(times_found)
+    for num in times_found:
+        if num % 2 != 0:
             counter += 1
-            if counter == 2:
-                return False
+        if counter == 2:
+            return False
 
-    print (counter)
     return True
-
-
-
 
 
 
