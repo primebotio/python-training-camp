@@ -1,26 +1,20 @@
 #!/usr/bin/env python3.5
 # -*- coding: utf-8 -*-
 
-import math
-import os
-import random
-import re
 import sys
 
+from collections import Counter
 
-
-def gameOfThrones(s):
+def game_of_thrones(s):
     s = s.rstrip('\n')
+
+    count_letters = Counter(s)
+
     counter = 0
-    lettermap = dict(zip("abcdefghijklmnopqrstuvwyz",range(0,26)))
-    times_found = [0]*26
 
-    for c in s:
-        if c in lettermap:
-            times_found[lettermap[c]] += 1
+    values = list(count_letters.values())
 
-    #print(times_found)
-    for num in times_found:
+    for num in values:
         if num % 2 != 0:
             counter += 1
         if counter == 2:
@@ -31,12 +25,12 @@ def gameOfThrones(s):
 
 
 if __name__ == '__main__':
-    with open("testcases/testcase3.txt") as file_obj:
+    with open("testcases/testcase2.txt") as file_obj:
         data = file_obj.readlines()
     s = data[0]
     # print (s)
 
-    result = gameOfThrones(s)
+    result = game_of_thrones(s)
 
     if result:
         print('Yes')
