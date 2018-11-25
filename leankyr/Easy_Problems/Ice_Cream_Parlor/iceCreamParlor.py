@@ -11,25 +11,18 @@ def icecreamParlor(m, arr):
 
     sorted_d = sorted(d.items(), key=operator.itemgetter(1))
 
-    #sorted_d = dict(zip(sorted_d[:][0],sorted_d[:][1]))
-    #sorted_d = {k:v for k,v in sorted_d}
-    #print (sorted_d)
-
-    #print (sorted_d[1])
-    #arr.sort()
-
-    #t1 = sorted_d[1]
-
     found = False
     for t1 in sorted_d:
         for t2 in sorted_d:
             if t1[1] + t2[1] > m:
                 break
-            if t1[1] + t2[1] == m and t1[0] != t2[0]:
+            elif t1[1] + t2[1] == m and t1[0] != t2[0]:
                 k1 = t1[0]
                 k2 = t2[0]
                 found = True
                 break
+            else:
+                continue
         if found:
             break
 
@@ -38,14 +31,6 @@ def icecreamParlor(m, arr):
     ret_val.append(k2 + 1)
     ret_val.sort()
     return ret_val
-
-
-
-
-
-
-
-
 
 
 
