@@ -2,21 +2,15 @@
 # -*- coding: utf-8 -*-
 
 import sys
-count = 0
-substairs = []
-from itertools import combinations
-# say I can only go up 1 stair at a time
+d = {1:1,2:2,3:4}
 def stepPerms(n):
-
-    if n == 1:
-        return 1
-    elif n == 2:
-        return 2
-    elif n == 3:
-        return 4
+    global d
+    if n in d:
+        return d[n]
     else:
-        return stepPerms(n - 1) + stepPerms(n - 2) + stepPerms(n -3)
-
+        result = stepPerms(n - 3) + stepPerms(n - 2) + stepPerms(n - 1)
+        d[n] = result
+        return d[n]
 
 
 if __name__ == '__main__':
