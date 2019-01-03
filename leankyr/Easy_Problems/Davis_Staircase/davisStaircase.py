@@ -2,19 +2,22 @@
 # -*- coding: utf-8 -*-
 
 import sys
-ways_list = list()
-way = list()
-step = 1
+count = 0
+substairs = []
+from itertools import combinations
 # say I can only go up 1 stair at a time
 def stepPerms(n):
-    global way
-    global step
-    if n == 0:
-        ways_list.append(way)
-        return way
+
+    if n == 1:
+        return 1
+    elif n == 2:
+        return 2
+    elif n == 3:
+        return 4
     else:
-        way.append(step)
-        return stepPerms(n-step)
+        return stepPerms(n - 1) + stepPerms(n - 2) + stepPerms(n -3)
+
+
 
 if __name__ == '__main__':
     with open("testcases/testcase1.txt") as file_obj:
@@ -27,15 +30,6 @@ if __name__ == '__main__':
         n = int(data[i+1])
         #print (n)
         res = stepPerms(n)
-        print (res)
-        way.clear()
-
-
-
-
-
-
-
-
+        print (res%10000000007)
 
 
